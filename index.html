@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="i.css"> -->
+
+</head>
+<style>
+    body {
+        background-color: rgb(255, 255, 90);
+    }
+
+    input {
+        border-radius: 4px;
+        border-color: brown;
+        width: 15rem;
+        height: 1.9rem;
+        margin: 30px 0px 30px 490px;
+        font-size: 1.2rem;
+
+    }
+
+    button {
+        width: 3rem;
+        height: 2.2rem;
+        border: none;
+        background-color: rgb(5, 194, 194);
+        border-radius: 4px;
+        border-style: solid;
+        border-color: rgb(32, 127, 126);
+    }
+
+    .button1 {
+        width: 4rem;
+        height: 2.1rem;
+        border: none;
+        background-color: rgb(19, 37, 37);
+        margin: 4px;
+        border-radius: 4px;
+        border-style: solid;
+        border-color: rgb(24, 80, 79);
+        color: aliceblue;
+    }
+</style>
+
+<body>
+
+    <div>
+        <input type="text" id="todo">
+        <button onclick="tor()" id="add">Add</button>
+        <div id="item">
+
+        </div>
+        <div id="edit"></div>
+
+    </div>
+    <script>
+        let todo = document.getElementById('todo')
+        let add = document.getElementById('add')
+        let item = document.getElementById('item')
+        let item1 = document.getElementById('edit')
+
+        let todolist = []
+
+
+        <!-- add.addEventListener('click',function (){ -->
+
+        function tor() {
+            let list = document.createElement('span')
+            let delet = document.createElement('button')
+            let divlist = document.createElement('div')
+            let edit = document.createElement('button')
+            delet.addEventListener('click', () => {
+                console.log(delet.parentElement.replaceWith())
+            }
+
+            )
+            edit.addEventListener('click', () => {
+                let divlist1 = document.createElement('div')
+                item1.appendChild(divlist1)
+                let x = document.createElement('input')
+                divlist1.appendChild(x)
+                x.value = edit.previousSibling.innerText
+                x.classList.add("col1")
+                let y = document.createElement('button')
+                y.innerText = 'update'
+                y.classList.add("button1")
+                divlist1.appendChild(y)
+                y.classList.add("col")
+                y.addEventListener('click', () => {
+                    edit.previousSibling.innerText = x.value
+                    x.replaceWith()
+                    y.replaceWith()
+
+                })
+            })
+
+            divlist.innerText = ''
+            item.appendChild(divlist)
+            divlist.appendChild(list)
+            divlist.appendChild(edit)
+            divlist.appendChild(delet)
+
+            delet.innerText = 'delete'
+            edit.innerText = 'edit'
+            delet.classList.add("button1")
+            edit.classList.add("button1")
+            list.innerHTML = todo.value
+            list.style.fontSize = "1.3rem"
+            list.style.marginLeft = "500px"
+
+
+            todo.value = ''
+            todolist.push(divlist)
+
+        }
+    </script>
+</body>
+
+</html>
