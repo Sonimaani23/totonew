@@ -1,46 +1,55 @@
-body{
-    background-color: rgb(255, 255, 255);
-    margin: 0;
+body {
+    background-color: rgb(255, 235, 249);
     box-sizing: border-box;
+    margin: 0;
 }
-.fill{
-    margin-left: 40px;
+h1{
+    margin-left: 30rem;
 }
-#head{
-    border: 2px solid rebeccapurple;
-    width: 1200px;
-    height: 100px;
-}
-.container{
-    display: flex;
-    flex-direction: row;
-    border: 2px solid rebeccapurple;
-    width: 1200px;
-    height: 480px;
+input {
+    border-radius: 4px;
+    border:  solid rgb(234, 127, 213) 3px;
     
-}
-.col{
-    display: flex;
-    flex-direction: column;
-    border: 2px solid rebeccapurple;
-    width: 500px;
-    justify-content: space-around
     
-}
-.line{
-    border: 2px solid rebeccapurple;
-    width: 390px;
-}
-.box{
-    border: 2px solid rebeccapurple;
-    width: 350px;
-    height: 400px;
-    margin: 16px;
-}
-#col1{
-    display: flex;
-    flex-direction: column;
-
-    
+    width: 19rem;
+    height: 1.9rem;
+    margin: 30px 0px 30px 490px;
+    font-size: 1.2rem;
 
 }
+
+button {
+    width: 5rem;
+    height: 2.5rem;
+    border: none;
+    background-color: rgb(243, 255, 255);
+    border-radius: 8px;
+    border-style: solid;
+    border-color: rgb(237, 152, 223);
+}
+
+.button1 {
+    width: 4rem;
+    height: 2.1rem;
+    border: none;
+    background-color: rgb(19, 37, 37);
+    margin: 4px;
+    border-radius: 4px;
+    border-style: solid;
+    border-color: rgb(24, 80, 79);
+    color: aliceblue;
+}
+#item {
+    
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+}
+#item button{
+    margin-left: 50rem;  
+    width: 5rem;
+    height: 1.6rem;
+    border-radius: 18px;
+}
+
+
